@@ -1,0 +1,691 @@
+@charset "utf-8";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,Verdana,arial,sans-serif;
+	font-size: 15px;
+	line-height: 1.8;
+}
+
+/******************************/
+/* 基本設定 */
+/******************************/
+a {
+	word-break: break-all;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-moz-opacity: 0.9;
+	-webkit-transition: opacity 1s ease-out;
+	-moz-transition: opacity 1s ease-out;
+	-ms-transition: opacity 1s ease-out;
+	transition: opacity 1s ease-out;
+}
+a:hover img {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-moz-opacity: 0.9;
+	-webkit-transition: opacity 1s ease-out;
+	-moz-transition: opacity 1s ease-out;
+	-ms-transition: opacity 1s ease-out;
+	transition: opacity 1s ease-out;
+}
+
+a:active {
+}
+
+
+/* clearfix */
+.cl {zoom:1;}
+.cl:after {content:"";display: block;clear: both; height: 0;visibility:hidden;}
+*:first-child+html .cl {display:inline-block;}/* for IE7 */
+.clear {clear:both;line-height:0;}
+
+/* font関連 */
+.bold {font-weight: bold !important;}
+.f_s {font-size: 12px !important;}
+.f_m {font-size: 14px !important;}
+.f_l {font-size: 18px !important;}
+.f_ll {font-size: 24px !important;}
+
+/* text-align */
+.t_right {text-align: right !important;}
+.t_center {text-align: center !important;}
+.t_left {text-align: left !important;}
+
+/* vertical-align */
+.va_b {vertical-align: bottom !important;}
+.va_m {vertical-align: middle !important;}
+.va_t {vertical-align: top !important;}
+
+/* float */
+.left {float:left;display:inline;}
+.right {float:right;display:inline;}
+
+/* bottom-margin */
+.mb0 {margin-bottom:0 !important;}
+.mb5 {margin-bottom:5px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb25 {margin-bottom:25px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb35 {margin-bottom:35px !important;}
+.mb40 {margin-bottom:40px !important;}
+.mb45 {margin-bottom:45px !important;}
+.mb50 {margin-bottom:50px !important;}
+.mb60 {margin-bottom:60px !important;}
+.mb80 {margin-bottom:80px !important;}
+
+/* right-margin */
+.mr5 {margin-right:5px !important;}
+.mr10 {margin-right:10px !important;}
+.mr15 {margin-right:15px !important;}
+.mr20 {margin-right:20px !important;}
+.mr25 {margin-right:25px !important;}
+.mr30 {margin-right:30px !important;}
+
+/* top-margin */
+.mt30 {margin-top:30px !important;}
+.mt50 {margin-top:50px !important;}
+.mt-s {margin-top:-10px !important;}
+.mt-m {margin-top:-20px !important;}
+
+/* margin-size */
+.mbs {margin-bottom: 20px !important;}
+.mbm {margin-bottom: 40px !important;}
+.mbl {margin-bottom: 90px !important;}
+
+/* padding */
+.plr10 {padding-left: 10px !important;padding-right: 10px !important;}
+.plr15 {padding-left: 15px !important;padding-right: 15px !important;}
+.plr20 {padding-left: 20px !important;padding-right: 20px !important;}
+.plr35 {padding-left: 35px !important;padding-right: 35px !important;}
+
+.pts {padding-top: 20px !important;}
+.ptm {padding-top: 60px !important;}
+.ptl {padding-top: 90px !important;}
+
+.pb0 {padding-bottom: 0 !important;}
+.pb30 {padding-bottom: 30px !important;}
+.pb60 {padding-bottom: 60px !important;}
+.pbm {padding-bottom: 40px !important;}
+.pbl {padding-bottom: 90px !important;}
+
+.br_n {border-right: none !important;}
+.bb_n {border-bottom: none !important;}
+
+/* 色 */
+.c_red {color: #ff0000;}
+.c_gray {color: #aaaaaa;}
+
+.dp_n {display: none;}
+.bg_n {background: none !important;}
+
+/* opacity */
+.opa a img {
+	opacity:1;
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+	background:#ffffff;
+	}
+.opa a:hover img {
+	opacity:0.6;
+	filter: alpha(opacity=60);
+	-moz-opacity:0.6;
+	}
+
+.opa_img img {
+	opacity:1;
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+	background:#ffffff;
+	}
+.opa_img img:hover {
+	opacity:0.6;
+	filter: alpha(opacity=60);
+	-moz-opacity:0.6;
+}
+.opa_on {
+	opacity:0.6;
+	filter: alpha(opacity=60);
+	-moz-opacity:0.6;
+}
+
+/********** ページャー **********/
+.pager {
+	text-align: center;
+}
+.pager ul {
+	padding: 20px 0;
+	letter-spacing: -.40em;
+}
+.pager li {
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	margin: 0 5px 0 0;
+	width: 35px;
+	border: 1px solid #624C02;
+	line-height: 35px;
+	background: #624C02;
+	color: #ffffff;
+	border-radius: 3px;
+	letter-spacing: normal;
+}
+.pager li a {
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	width: 35px;
+	text-decoration: none;
+	background: #ffffff;
+	border-radius: 3px;
+}
+.pager li a:hover {
+	background: #624C02;
+	color: #ffffff;
+}
+.pager li.page_next {
+	width: 100px;
+}
+.pager li.page_next a {
+	width: 100px;
+}
+.pager li.page_prev {
+	width: 100px;
+}
+.pager li.page_prev a {
+	width: 100px;
+}
+
+
+
+/******************************/
+/* フォーム関連 */
+/******************************/
+.form_table th{
+	vertical-align:top;
+}
+.year ,.month ,.day ,.hour ,.minute ,.second ,.zip ,.tel {
+	width: 50px;
+}
+.shop_name {
+	width: 180px;
+}
+.shop_address {
+	width: 330px;
+}
+.error {
+	margin: 5px 0 0 0;
+	color: red;
+}
+
+/***** inputボタン *****/
+
+input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="fax"],textarea,select {
+	padding: 4px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	color: #666666;
+	vertical-align: middle;
+	font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Verdana,arial,sans-serif;
+	box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+}
+input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover,input[type="tel"]:hover,input[type="fax"]:hover,textarea:hover,select:hover {
+	border: 1px solid #888888;
+	color: #333333;
+	box-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus,input[type="tel"]:focus,input[type="fax"]:focus,textarea:focus,select:focus {
+	border: 1px solid #67CBDF;
+	color: #333333;
+	box-shadow: 1px 1px 0px rgba(0,0,0,0.2), 0px 0px 3px #67CBDF;
+}input[type="radio"],input[type="checkbox"] {
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
+.input_btn {
+	padding: 4px 10px;
+	border: 1px solid #888888;
+	border-radius: 3px;
+	background: #EBEBEB;
+	background-image: linear-gradient(bottom, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(221,221,221)),
+		color-stop(1, rgb(254,254,254))
+	);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.3), inset 0 0 3px rgba(230,230,250,0.3);
+	text-shadow:0px 1px 0px rgba(255,255,255,0.8);
+	color: #202D37;
+	font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Verdana,arial,sans-serif;
+	font-size: 14px;
+	font-weight: normal !important;
+	cursor: pointer;
+}
+.input_btn:hover {
+	border: 1px solid #67CBDF;
+	background: #31AAC2;
+	background-image: linear-gradient(bottom, rgb(49,170,194) 32%, rgb(81,190,212) 83%);
+	background-image: -o-linear-gradient(bottom, rgb(49,170,194) 32%, rgb(81,190,212) 83%);
+	background-image: -moz-linear-gradient(bottom, rgb(49,170,194) 32%, rgb(81,190,212) 83%);
+	background-image: -webkit-linear-gradient(bottom, rgb(49,170,194) 32%, rgb(81,190,212) 83%);
+	background-image: -ms-linear-gradient(bottom, rgb(49,170,194) 32%, rgb(81,190,212) 83%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.32, rgb(49,170,194)),
+		color-stop(0.83, rgb(81,190,212))
+	);
+
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0 0 3px rgba(200,200,250,0.3), 0 2px 5px rgba(0,100,255, 0.4);
+	text-shadow:0px 1px 0px rgba(0,0,0,0.3);
+	color: #ffffff !important;
+	font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Verdana,arial,sans-serif;
+	cursor: pointer;
+}
+.input_btn a:hover {
+	color: #ffffff !important;
+	text-decoration: none;
+}
+
+.btn_middle {/* 中サイズボタン */
+	padding: 5px;
+	width: 150px;
+	font-size: 15px;
+	font-weight: bold !important;
+}
+.btn_w_m {
+	width: 80px;
+}
+
+
+label {
+	cursor: pointer;
+}
+/* input画像ボタンにつける */
+.input_img {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+}
+.input_img:hover {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+/* inputテキストボタンにつける */
+.input_txt {
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.input_txt:hover {
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.input_w_ss { width: 50px;}
+.input_w_m { width: 315px;}
+.input_w_max { width: 500px;}
+.textarea_w_max {
+	width: 500px;
+	height: 300px;
+}
+
+/********** ColorBox Core Style ***********/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(../_img/overlay.png) repeat 0 0;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(../_img/controls.png) no-repeat -100px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(../_img/controls.png) no-repeat -129px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(../_img/controls.png) no-repeat -100px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(../_img/controls.png) no-repeat -129px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(../_img/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(../_img/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(../_img/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(../_img/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(../_img/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious.hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(../_img/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext.hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(../_img/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(../_img/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(../_img/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose.hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to IE9.
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+*/
+.cboxIE6 #cboxTopLeft{background:url(../_img/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(../_img/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(../_img/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(../_img/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(../_img/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(../_img/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(../_img/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(../_img/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+
+/***** 投稿ページ *****/
+.article{
+	margin-bottom: 50px;
+}
+.article h2,
+.entry-title {
+	font-size: medium;
+	font-weight: bold;
+	color: #7D6240;
+	margin-bottom: 10px;
+	clear: both;
+	border-left-width: 4px;
+	border-left-style: solid;
+	border-left-color: #CCCC99;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #D5C593;
+}
+.entry-meta{
+	margin-bottom: 20px;
+}
+
+nav.post-navigation{
+	float: left;
+	width: 640px;
+	display:inline;
+}
+.nav-previous{
+	float: left;
+}
+.nav-next{
+	float: right;
+}
+
+.alignleft{
+	float: left;
+	margin-right: 15px;
+}
+.alignright{
+	float: right;
+	margin-left: 15px;
+}
+
+/***** 投稿ページ *****/
+.blog_wrap{
+	margin-bottom: 30px;
+}
+.blog_body{
+	margin-bottom: 20px;
+}
+.date{
+	text-align: left;
+	color: #5e5e5e;
+}
+.icatch_wrap{
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+}
+.search-field{
+	width: 120px !important;
+}
+.widget{
+	margin-bottom: 50px;
+}
+.widget_nav_menu h1,{
+	font-size: 16px;
+	padding-bottom: 5px;
+	color: #a9a9a9;
+	border-bottom: 1px dotted #6c5a46;
+}
+.widget-title{
+	font-size: 16px;
+	font-weight: bold;
+	color: #a9a9a9;
+	border-bottom: 1px dotted #6c5a46;
+	margin-bottom: 10px;
+}
+
+.widget_nav_menu ul{
+	
+}
+.widget_nav_menu ul li{
+	font-weight: bold;
+}
+.widget_nav_menu ul li.menu-item a:link{
+	padding-left: 10px;
+	height: 50px;
+	line-height: 50px;
+	width: 200px;
+	color: #ffa000 !important;
+	text-decoration: none !important;
+	display: block;
+}
+.widget_nav_menu ul li.menu-item a:visited{
+	height: 50px;
+	line-height: 50px;
+	width: 200px;
+	text-decoration: none !important;
+	color: #ffa000 !important;
+	display: block;
+}
+.widget_nav_menu ul li.menu-item a:hover{
+	height: 50px;
+	line-height: 50px;
+	width: 200px;
+	text-decoration: none !important;
+	color: #ffffff !important;
+	display: block;
+}
+
+/***** 404ページ *****/
+.wrap_404{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.wrap_404 h1{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/***** ↓↓↓ギャラリー機能させる為に必要↓↓↓ *****/
+/***** キャプション *****/
+.wp-caption {
+	margin-bottom: 1.6em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+.wp-caption-text {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	font-family: "Noto Sans", sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	padding: 0.5em 0;
+}
+
+/***** ギャラリー *****/
+.gallery {
+	margin-bottom: 1.6em;
+}
+.gallery-item {
+	display: inline-block;
+	padding: 1.5%;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+figure.gallery-item img {
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 47%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 30.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 22%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 17%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 13.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 11.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 9.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 8.11%;
+}
+.gallery-icon img {
+	margin: 0 auto;
+}
+.gallery-caption {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	display: block;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	padding: 0.5em 0;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+/***** ↑↑↑ここまで/ギャラリー機能させる為に必要↑↑↑ *****/
+
+/***** ↓↓↓メディア画像挿入する時の配置位置で必要↓↓↓ *****/
+img.alignright { 
+	display: block; 
+	margin: 0 0 0 auto; 
+}/* 配置位置 右 */
+img.alignleft { 
+	display: block; 
+	margin: 0 auto 0 0; 
+}/* 配置位置 左 */
+img.aligncenter { 
+	display: block; 
+	margin: 0 auto;
+}/* 配置位置 中央 */
+img.float-left { 
+	float:left; 
+}/* 回り込み 左 */
+img.float-right { 
+	float:right;
+}/* 回り込み 右 */
+/**↑↑↑ここまで/メディア画像挿入する時の配置位置で必要↑↑↑ **/
+
+/***** 予約フォーム *****/
+#booking-reservation-fieldset td,#booking_client-fieldset td,#booking-confirm-fieldset td{
+	text-align: left;
+}
+

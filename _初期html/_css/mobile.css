@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+@media screen and (max-width:500px){
+#wrap{
+	margin-top: 30px;
+}
+header {
+	float: left;
+	margin: -5px 10px 30px;
+}
+header h1 img {
+	height: 30px;
+}
+header p{
+	font-size: 10px;
+}
+
+/* Nain Navi */
+#btn_mob{
+	float: right;
+	position: relative;
+	display: block;
+	margin-right: 30px;
+}
+
+
+#main_nav { 
+    display: none;
+    clear: both;
+ }
+#main_nav li{
+	position: relative;
+    width: 100%;
+    text-align: left;
+	border-bottom: 1px solid #000;
+	padding: 5px 0 10px;
+	margin: 0 0 5px;
+}
+#main_nav li:before {
+	content: "";
+	margin-left: 20px;
+}
+#main_nav li:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 6px;
+	height: 6px;
+	margin: -4px 0 0 0;
+	border-top: solid 2px #000;
+	border-right: solid 2px #000;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);}
+#main_nav li span:before {
+	content: "" ;
+	white-space: nowrap ;
+	margin-left: 10px;
+}
+
+
+/*TOP（トップページ）*/
+/* top_main_view（メインスライダー） */
+#top_main_view{
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #000;
+}
+
+/*top_service_wrap*/
+.top_service_wrap{
+	text-align: center;
+	background-color: #ccc;
+	margin: 0 auto;
+	padding: 20px 0 50px;
+}
+.top_service_wrap ul{
+	display: inline-block;
+	margin: 0 auto;
+	
+}
+.top_service_wrap ul li{
+	float: none;
+	width: 250px;
+	height: 250px;
+	margin: 0 40px 10px;
+	background-color: #000;
+	-moz-border-radius: 250px;
+	-webkit-border-radius: 250px;
+	border-radius: 250px;
+}
+
+
+/**********/
+.pc_only {
+	display: none;
+}
+.pc_only_br {
+	display: none;
+}
+.sp_only {
+	display: block;
+}
+.sp_only_br {
+	display: block;
+}
+
+
+
+}

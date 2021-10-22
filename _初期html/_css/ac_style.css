@@ -1,0 +1,197 @@
+@charset "utf-8";
+body, html {
+	height: 100%;
+}
+body {
+}
+#wrap {
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+#content_wrap{
+	padding-bottom: 230px;
+}
+
+/* Header */
+
+header {
+	height: 200px;
+	text-align: center;
+	margin: auto;
+}
+#header_l {
+	float: left;
+}
+#header_l h1 {
+	text-align: left;
+}
+#header_r {
+	float: right;
+}
+#btn_mob{
+	display: none;
+}
+/* Navigation */
+#main_nav {
+}
+#main_nav ul {
+	letter-spacing: -.40em;
+}
+#main_nav li {
+	display: inline-block;
+	margin-right: 10px;	
+	letter-spacing: normal;
+}
+/* Footer */
+footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	min-height: 200px;
+	padding: 10px 0;
+	background-color: #000;
+	color: #fff;
+}
+#footer_wrap {
+	text-align: center;
+}
+#copy_right {
+}
+footer a:link {
+	color: #fff;
+	text-decoration: none;
+}
+footer a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* TOPページ */
+#contents{
+	
+}
+#contents h1{
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+#top_main_view {
+}
+#top_menu {
+	letter-spacing: -.40em;
+}
+#top_menu section {
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: top;
+}
+#top_menu h2 {
+}
+#top_menu ul {
+}
+#top_menu li {
+}
+#tm1 {
+}
+#tm2 {
+}
+#tm3 {
+}
+/* SUBページ */
+
+#content {
+	padding-bottom: 200px;
+}
+
+/* blog(ブログ) */
+
+#blog_header {
+}
+#blog_content {
+}
+#blog_l {
+	float: left;
+}
+#blog_r {
+	float: right;
+}
+/* blog(ブログ一覧ページ（TOP・アーカイブ・カテゴリ・検索）) */
+
+#blog_l .post {
+}
+#blog_l .post h3 {
+}
+#blog_l .post .date {
+}
+.excerpt_wrap {
+}
+.more_p {
+}
+/* blog(ブログ詳細ページ) */
+
+.blog_wrap {
+}
+#cs_title {
+}
+.blog_wrap .date {
+}
+.blog_body {
+}
+.blog_body p {
+	margin-bottom: 20px;
+}
+.widget_search span {
+	display: none;
+}
+/* blog(ブログ検索結果) */
+
+#srf {
+}
+.no-results p {
+}
+.pagination {
+	text-align: center;
+}
+a.page-numbers, .pagination .current {
+	background: #fff;
+	border: 1px #ccc solid;
+	padding: 5px 8px;
+	margin: 0 2px;
+	text-decoration: none;
+}
+.pagination .current {
+	background: #000;
+	border: solid 1px #000;
+	color: #fff;
+}
+/* contact7
+----------------------------- */
+span.wpcf7-list-item {
+	display: block;
+}
+
+
+/**********/
+.pc_only_br {
+	display: block;
+}
+.sp_only {
+	display: none;
+}
+.sp_only_br {
+	display: none;
+}
+
